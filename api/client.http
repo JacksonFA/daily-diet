@@ -1,0 +1,43 @@
+### CREATE USER SESSION
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "name": "Jackson"
+}
+
+### LIST ALL MEALS
+GET http://localhost:3333/meals
+
+### LIST ALL MEALS METRICS
+GET http://localhost:3333/meals/metrics
+
+### LIST A MEAL
+GET http://localhost:3333/meals/9ef61d75-3207-4cdb-8b68-8a6c2f486fa8
+
+### CREATE MEAL
+POST http://localhost:3333/meals
+Content-Type: application/json
+
+{
+  "name": "BK",
+  "description": "",
+  "date": "12/05/24",
+  "time": "12:00",
+  "in_diet": true
+}
+
+### UPDATE A MEAL
+PUT http://localhost:3333/meals/9ef61d75-3207-4cdb-8b68-8a6c2f486fa8
+Content-Type: application/json
+
+{
+  "name": "BK Atualizado",
+  "description": "",
+  "date": "12/05/24",
+  "time": "12:00",
+  "in_diet": false
+}
+
+### DELETE A MEAL
+DELETE http://localhost:3333/meals/9ef61d75-3207-4cdb-8b68-8a6c2f486fa8
